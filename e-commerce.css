@@ -96,9 +96,9 @@ img.logo{
 
 .flex{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    gap: 7px;
+    gap: 2px;
 }
 
 .hero-subheading{
@@ -124,6 +124,7 @@ img.logo{
     border-radius: 5px;
     cursor: pointer;
     width: 155px;
+    position: relative;
 }
 
 .custom-shape-divider-bottom-1726465929 {
@@ -145,4 +146,106 @@ img.logo{
 
 .custom-shape-divider-bottom-1726465929 .shape-fill {
     fill: #FFFFFF;
+}
+
+/* //////////////////Discount Section/////////////////////// */
+.section-discount-product{
+    display: flex;
+    align-items: center;
+    height: 270px;
+}
+
+
+.discount-bg{
+    background: url(sale\ bg.avif) no-repeat center/cover;
+    padding: 5px;
+}
+
+.discount-img {
+    img{
+        height: 150px;
+        width: 150px;
+   }
+}
+
+.headphone-box{
+    width: 335px;
+}
+
+.discount-extra{
+    p{
+       margin-bottom: 5px;
+    }
+
+    h3{
+        margin-bottom: 15px;
+        margin-top: 0;
+        color: crimson;
+        animation: discount 1s linear infinite;
+    }
+    a{
+        color: black;
+    }
+}
+
+@keyframes discount{
+    0%{
+        transform: translateY(4px);
+    }
+    25%{
+        transform: translateY(-4px);
+    }
+    100%{
+        transform: translateY(4px);
+    }
+}
+
+.discount-shop:hover{
+    color:teal;
+    transition: ease 0.2s;
+}
+
+.discount-shop{
+    position: relative;
+}
+
+.discount-shop::after{
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: rgb(25, 78, 121);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+/* ///////////Service Section/////////////////// */
+.section-services{
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.service {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+    width: 100%;
+}
+
+.service-flex{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    i{
+        font-size: 25px;
+        color: #4071fa;
+    }
+}
+
+.service-margin h4,
+.service-margin p{
+    margin: 0;
+    line-height: 22px;
 }
