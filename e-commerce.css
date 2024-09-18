@@ -117,14 +117,20 @@ img.logo{
 }
 
 .hero-button{
-    background-color: firebrick;
+    margin: 7px 0;
+    background-color: rgb(165, 31, 31);
     color: white;
     padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 155px;
+    width: 165px;
     position: relative;
+    font-weight: 600;    
+}
+
+.hero-button:hover{
+    box-shadow: 0 0 25px rgb(165, 31, 31);
 }
 
 .custom-shape-divider-bottom-1726465929 {
@@ -206,7 +212,21 @@ img.logo{
 }
 
 .discount-shop{
+    display: inline-block;
     position: relative;
+    animation: explore 1s linear infinite;
+}
+
+@keyframes explore{
+   0%{
+        transform: scale(0.9);
+    }
+    50%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0.9);
+    }
 }
 
 .discount-shop::after{
