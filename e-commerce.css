@@ -1,10 +1,11 @@
-body{
-    padding: 0 5px;
-}
-
 *{
     text-decoration: none;
     list-style: none;
+    scroll-behavior: smooth;
+}
+
+body{
+    padding: 0 5px;
 }
 
 .container{
@@ -74,7 +75,7 @@ img.logo{
     color: white;
 }
 
-/* //////////////// MAIN SECTION //////////////////*/
+/***** MAIN SECTION *****/
 .section-hero{
     background-image: linear-gradient(120deg, #3db1db 40%, #42b2d4 60%);
 }
@@ -167,7 +168,7 @@ img.logo{
     fill: #FFFFFF;
 }
 
-/* //////////////////Discount Section/////////////////////// */
+/*****Discount Section  *****/
 .section-discount-product{
     display: flex;
     align-items: center;
@@ -252,7 +253,12 @@ img.logo{
     left: 0;
 }
 
-/* ///////////Service Section/////////////////// */
+/*****Service Section*****/
+.section-products{
+    min-height: 171vh;
+    height: auto;
+}
+
 .section-services{
     height: 150px;
     display: flex;
@@ -281,4 +287,102 @@ img.logo{
 .service-margin p{
     margin: 0;
     line-height: 22px;
+}
+
+/*****Subscription Section *****/
+.section-subscription{
+    height: 200px;
+    position: relative;
+}
+
+.section-subscription::after{
+    content: '';
+    position: absolute;
+    background: url(mail\ icon.png) no-repeat;
+    height: 230px;
+    width: 230px;
+    transform: rotate(15deg);
+    top: 50px;
+    z-index: -1;
+    left: 160px;
+    opacity: 0.3;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    p{
+        font-size: 1.5rem;
+        color: rgb(57, 57, 57);
+
+        span{
+            font-size: 2rem;
+            font-weight: 550;
+            color: black;
+        }
+    }
+}
+
+.subs{
+    display: flex;
+    margin-bottom: 25px;
+
+    input{
+        border: 1px solid rgb(223, 217, 217);
+        border-radius: 50px 0 0 50px;
+        height: 35px;
+        width: 25vw;
+        text-indent: 15px;
+        padding: 0;
+    }
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-left: 0;
+        border-radius: 0 50px 50px 0;
+        width: 7vw;
+        background-color: red;
+        color: white;
+
+        button{
+            font-size: 1rem;
+            font-weight: 550;
+            border: none;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
+
+.social{
+    display: flex;
+    gap: 20px;
+
+    a{
+        color: black;
+    }
+
+    i{
+        border: 1px solid rgb(195, 193, 193);
+        font-size: 20px;
+        padding: 10px;
+
+        transition: linear 0.2s;
+        &:hover{
+            background-color: rgb(240, 238, 238);
+        }
+    }
+}
+
+.fa-linkedin-in:hover{
+    color: #0077B5;
+}
+
+.fa-instagram:hover{
+    color: #d32308;
 }
