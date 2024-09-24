@@ -289,6 +289,26 @@ img.logo{
     line-height: 22px;
 }
 
+/***** Items *****/
+.productTemplate{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 60px;
+}
+
+.card-img img{
+    height: 150px;
+    width: 160px;
+}
+
+.card {
+    box-shadow: 0 0 8px #cacaca;
+}
+
+.info {
+    padding: 15px;
+}
+
 /*****Subscription Section *****/
 .section-subscription{
     height: 200px;
@@ -427,7 +447,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 120px;
+    width: 66px;
     height: 30px;
     overflow: hidden;
 
