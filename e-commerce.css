@@ -309,6 +309,17 @@ img.logo{
     padding: 15px;
 }
 
+.car-productprice-container,
+.card-product-stock,
+.card-productQuantity-container,
+.incre-decre{
+    display: flex;
+}
+
+.car-productprice-container .card-productActualPrice{
+    text-decoration: line-through;
+}
+
 /*****Subscription Section *****/
 .section-subscription{
     height: 200px;
@@ -453,7 +464,6 @@ footer{
 
     i{
         font-size: 1.5rem;
-        color: white;
         opacity: 0;
         position: absolute;
         transition: opacity 0.5s ease-in-out;
