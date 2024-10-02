@@ -84,6 +84,34 @@ products.forEach(product => {
     productContainer.appendChild(clone);
 });
 
-const increment = document.querySelectorAll(".cartIncrement");
-const decrement = document.querySelectorAll(".cartDecrement");
-let quantity = document.querySelectorAll(".card-productQuantity");
+const incrementButtons = document.querySelectorAll(".cartIncrement");
+const decrementButtons = document.querySelectorAll(".cartDecrement");
+const quantities = document.querySelectorAll(".card-productQuantity");
+const stocks = document.querySelectorAll(".card-productStock");
+
+incrementButtons.forEach((incrementButton, index) => {
+    incrementButton.addEventListener("click", () => {
+
+        let currentQuantity = parseInt(quantities[index].textContent);
+        let stockValue = parseInt(stocks[index].textContent);
+
+        
+        if (currentQuantity < stockValue) {
+            currentQuantity++;
+            quantities[index].textContent = currentQuantity < 10 ? `0${currentQuantity}` : currentQuantity;
+        } else {
+            alert("Cannot add more than available stock");
+        }
+    });
+});
+
+decrementButtons.forEach((decrementButton, index) => {
+    decrementButton.addEventListener("click", () => {
+       
+        let currentQuantity = parseInt(quantities[index].textContent);
+        if (currentQuantity > 1) {
+            currentQuantity--;
+            quantities[index].textContent = currentQuantity < 10 ? `0${currentQuantity}` : currentQuantity;
+        }
+    });
+});
